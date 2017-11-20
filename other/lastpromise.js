@@ -1,10 +1,9 @@
-function lastPromise(promiseArray){
-  if (typeof promiseArray != 'object' || !Array.isArray(promiseArray)) throw new Error('Invalid Promise Array');
+function lastPromise(...promiseArray){
   return new Promise((resolve,reject)=>{
     let finished = [];
     const done = (index,result)=>{
       finished[index] = true;
-      if (Object.keys(a).length == promiseArray.length) {
+      if (Object.keys(finished).length == promiseArray.length) {
         resolve(result);
       }
     }
