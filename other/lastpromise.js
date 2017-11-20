@@ -8,7 +8,7 @@ function lastPromise(...promiseArray){
       }
     }
     promiseArray.forEach((promise,index)=>{
-      promise.then(done.bind(null,index)).catch(done.bind(nullindex));
+      promise.then(done.bind(null,index)).catch(done.bind(null,index));
     });
   });
 }
