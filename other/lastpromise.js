@@ -8,6 +8,7 @@ function lastPromise(...promiseArray){
       }
     }
     promiseArray.forEach((promise,index)=>{
+      if (!promise instanceof Promise) throw new Error("Input Not Promise!");
       promise.then(done.bind(null,index)).catch(done.bind(null,index));
     });
   });
